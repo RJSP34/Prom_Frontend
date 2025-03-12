@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".listMovie.MainMovieFragments">
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="76dp"
+            android:layout_height="680dp"
+            android:layout_gravity="start"
+            app:layout_constraintEnd_toStartOf="@+id/ReclienerMovies"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/navbar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ReclienerMovies"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="524dp"
+            android:layout_height="683dp"
+            app:layout_constraintStart_toEndOf="@+id/navigationView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context=".MovieFragment"
+            tools:listitem="@layout/fragment_movie"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

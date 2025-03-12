@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_window"
+    android:layout_width="400dp"
+    android:layout_height="400dp"
+    android:background="#62def8"
+    android:translationX="100dp"
+    android:translationY="100dp">
+
+    <TextView
+        android:id="@+id/popup_Backlog_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="This is a popup window."
+        android:textSize="22sp" />
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="390dp"
+        android:layout_height="292dp"
+        android:layout_marginEnd="10dp"
+        android:stretchColumns="1"
+        android:translationY="100dp">
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="Name"
+                android:textColor="#006064" />
+
+            <TextView
+                android:gravity="end"
+                android:padding="3dip"
+                android:text="Hello" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="Release Date"
+                android:textColor="#006064" />
+
+            <TextView
+                android:gravity="end"
+                android:padding="3dip"
+                android:text="Hello" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="Length"
+                android:textColor="#006064" />
+
+            <TextView
+                android:gravity="end"
+                android:padding="3dip"
+                android:text="Hello" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="Age Rating"
+                android:textColor="#006064" />
+
+            <TextView
+                android:gravity="end"
+                android:padding="3dip"
+                android:text="Hello" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="Watched Date"
+                android:textColor="#006064" />
+
+            <TextView
+                android:gravity="end"
+                android:padding="3dip"
+                android:text="Hello" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:padding="3dip"
+                android:text="Status"
+                android:textColor="#006064" />
+
+            <TextView
+                android:gravity="end"
+                android:padding="3dip"
+                android:text="Hello" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:padding="3dip"
+                android:text="User Rating"
+                android:textColor="#006064" />
+
+            <TextView
+                android:gravity="end"
+                android:padding="3dip"
+                android:text="Hello" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".listMovie.MainMovieFragments">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="34dp"
+        android:layout_height="449dp"
+        android:layout_gravity="start"
+        app:layout_constraintBottom_toTopOf="@+id/materialToolbar"
+        app:layout_constraintEnd_toStartOf="@+id/ReclienerMovies"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.472">
+
+        <ImageButton
+            android:layout_width="38dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/descr_overflow_button"
+            android:onClick="showPopup"
+            android:src="@drawable/ic_overflow_holo_dark" />
+    </com.google.android.material.navigation.NavigationView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ReclienerMovies"
+        android:layout_width="350dp"
+        android:layout_height="538dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/materialToolbar"
+        app:layout_constraintStart_toEndOf="@+id/navigationView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/fragment_movie" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="358dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="1dp"
+        android:background="@color/light_blue_200"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/input_string"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:inputType="textAutoCorrect"
+        android:minHeight="48dp"
+        android:hint="@string/movie_select"
+        android:textColor="#37474F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.563"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar" />
+
+    <Button
+        android:id="@+id/button_Input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/add"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintStart_toEndOf="@+id/input_string"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

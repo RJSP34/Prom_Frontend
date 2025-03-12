@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Project"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31"
+        android:enableOnBackInvokedCallback="true"
+        >
+        <activity
+            android:name=".Alt_Detailed_Activity.DrawerMainActivity"
+            android:exported="true"
+            android:label="@string/title_activity_drawer_main"
+            android:theme="@style/Theme.Project.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".listMovie.MainMovieFragments"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".main.login.ui.Registration.RegisterActivity"
+            android:exported="false"
+            android:label="Register">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <service
+            android:name=".services.SoundService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="TODO" />
+        <service
+            android:name=".services.UpdateDataBase"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="TODO" />
+
+        <activity
+            android:name=".main.login.ui.login.LoginMainActivity"
+            android:exported="true"
+            android:label="@string/title_activity_login_main" />
+        <activity
+            android:name=".main.main.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+    </application>
+
+</manifest>
